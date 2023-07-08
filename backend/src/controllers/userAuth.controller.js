@@ -18,5 +18,18 @@ const userRegister = catchAsync(async(req,res)=>{
     }
 })
 
+const userLogin = catchAsync(async(req,res)=>{
+    try {
+        const logInUser = await UserAuthServiceInstance.login(req.body);
+        if(logInUser.isLoggedIn){
+            res.status(200).json(logInUser);
+        }else{
+            throw new ApiError(httpStatus.FORBIDDEN, "Invalid email/password")
+        }    
+    } catch (error) {
+        throw new ApiError(httpStatus.INTERNAL_SERVER_ERROR, "Failed to login")
+        
+    }
+})
 
-module.exports = {userRegister}
+module.exports = {userRegister, userLogin}

@@ -6,7 +6,7 @@ const errorHandlers = (err,req,res,next)=>{
     const response = {
         code: statusCode,
         message,
-        ...config(config.env === "development" && {stack:err.stack})
+        ...(config.env === "development" && {stack:err.stack})
     };
     
     if(config.env === "development"){
