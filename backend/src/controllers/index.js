@@ -1,0 +1,1 @@
+module.exports.userRegister = require("./userAuth.controller").userRegister

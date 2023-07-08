@@ -3,10 +3,10 @@ const compression = require("compression");
 const cors = require("cors");
 const httpStatus = require("http-status");
 const morgan = require("morgan");
-const {errorHandlers} = require("./middlewares/error.middleware");
+const {errorHandlers} = require("./middlewares");
 const ApiError = require("./utils/ApiError");
 const helmet  = require("helmet");
-
+const authRoutes = require("./routes/userAuth.route")
 const app= express();
 
 app.use(morgan('dev'));
@@ -34,6 +34,9 @@ const corsConfig = {
 app.use(cors(corsConfig));
 app.options("*",cors());
 
+
+// routes
+app.use("/auth",authRoutes);
 
 // send back a 404 error for any unknown api request
 app.use((req,res,next)=>{

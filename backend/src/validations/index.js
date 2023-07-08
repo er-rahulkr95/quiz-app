@@ -1,0 +1,2 @@
+module.exports.userRegisterValidationSchema = require("./userAuth.validator").userRegisterValidationSchema;
+module.exports.userLoginValidationSchema = require("./userAuth.validator").userLoginValidationSchema;
