@@ -8,9 +8,8 @@ const checkUserExistsInDB = catchAsync(async(req,res,next)=>{
     try{
         const {email} = req.body;
         const user = await UserServiceInstance.findByEmail(email);
-        
         if(!user){
-            throw new ApiError(httpStatus.NOT_FOUND,"User Not Exists")
+          res.status(404).json({message:"User Does Not Exist", success:false})
 
         }else{
             next()

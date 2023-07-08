@@ -22,9 +22,9 @@ const userLogin = catchAsync(async(req,res)=>{
     try {
         const logInUser = await UserAuthServiceInstance.login(req.body);
         if(logInUser.isLoggedIn){
-            res.status(200).json(logInUser);
+            res.status(200).json({message:"Log In Successful",data:logInUser});
         }else{
-            throw new ApiError(httpStatus.FORBIDDEN, "Invalid email/password")
+           res.status(403).json({message:"Invalid Password"})
         }    
     } catch (error) {
         throw new ApiError(httpStatus.INTERNAL_SERVER_ERROR, "Failed to login")

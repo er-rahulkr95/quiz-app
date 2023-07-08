@@ -7,7 +7,7 @@ class UserService{
     findByEmail = async(email)=>{
         try {
         const userResult = await Users.findOne({email})
-        return userResult;
+            return userResult;
         } catch (error) {
             return error;
         }
