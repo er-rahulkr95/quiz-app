@@ -7,6 +7,10 @@ module.exports.getAllQuiz = require("./quizs.controller").getAllQuiz;
 module.exports.getQuizById = require("./quizs.controller").getQuizById;
 module.exports.updateQuiz = require("./quizs.controller").updateQuiz;
 module.exports.deleteQuiz = require("./quizs.controller").deleteQuiz;
+module.exports.allPublishedQuiz = require("./quizs.controller").allPublishedQuiz;
+module.exports.getPublishedQuizById = require("./quizs.controller").getPublishedQuizById;
+
+
 
 
 module.exports.addQuizQuestion = require("./quizs.controller").addQuizQuestion;

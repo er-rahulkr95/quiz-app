@@ -4,6 +4,7 @@ const Joi = require('joi');
 
 dotenv.config({ path: path.join(__dirname, '../../.env') });
 
+//Joi schema for validation of environment variables
 const envVarsSchema = Joi.object()
   .keys({
     NODE_ENV: Joi.string()

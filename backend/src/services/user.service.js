@@ -1,6 +1,6 @@
 const {Users} = require("../models");
 
-
+// Class to perform CRUD operation on users collection in MongoDB using Users model
 
 class UserService{
 

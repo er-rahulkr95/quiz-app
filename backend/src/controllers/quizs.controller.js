@@ -4,7 +4,10 @@ const ApiError = require("../utils/ApiError");
 const catchAsync = require("../utils/catchAsync");
 const httpStatus = require("http-status");
 
-
+/**
+ * Utilizing the Quiz Service Layer to create and get Quiz + Question data from mongoDB, 
+ *  return them as reponse for routes requesting these controllers
+ */
 
 const createQuiz = catchAsync(async(req,res)=>{
         try {
@@ -12,7 +15,7 @@ const createQuiz = catchAsync(async(req,res)=>{
             if(createQuiz.code === 11000){
                 res.status(409).json({message: "Quiz Already Exits By Same Quiz Name", success:false})
             }else{
-                res.status(200).json({message: "Quiz created Successfully", success:true, createQuiz})
+                res.status(201).json({message: "Quiz created Successfully", success:true, data:{quizName:createQuiz.quizName, quizId:createQuiz._id}})
             }
         } catch (error) {
             if(error.code === 11000){
@@ -27,7 +30,11 @@ const createQuiz = catchAsync(async(req,res)=>{
 const getAllQuiz = catchAsync(async(req,res)=>{
     try {
         const allQuiz = await QuizServiceInstance.getAllQuiz();
-        res.status(200).json({message:" All Quiz fetched successfully", success:true, data:allQuiz});  
+        if(allQuiz.length){
+            res.status(200).json({message:" All Quiz fetched successfully", success:true, data:allQuiz});  
+        }else{
+            res.status(404).json({message:"No Quiz to show", success:true, data:allQuiz});  
+        }
     } catch (error) {
         throw new ApiError(httpStatus.INTERNAL_SERVER_ERROR, "Failed to get quiz's")
     }
@@ -75,7 +82,7 @@ const addQuizQuestion = catchAsync(async(req,res)=>{
     try {
         const {quizId} = req.params;
         const question = await QuizServiceInstance.addQuestion(quizId,req.body);
-        res.status(200).json({message:"Question Added SuccessFully", success:true, data:question})
+        res.status(201).json({message:"Question Added SuccessFully", success:true, data:question})
         
     } catch (error) {
         throw new ApiError(httpStatus.INTERNAL_SERVER_ERROR, "Failed to add question");
@@ -105,4 +112,35 @@ const deleteQuizQuestion = catchAsync(async(req,res)=>{
     }
 })
 
-module.exports = {createQuiz, getAllQuiz, getQuizById, updateQuiz, deleteQuiz, addQuizQuestion,updateQuizQuestion,deleteQuizQuestion }
+const allPublishedQuiz = catchAsync(async(req,res)=>{
+    try {
+        const allQuiz = await QuizServiceInstance.getAllPublishedQuiz();
+        if(allQuiz.length){
+            res.status(200).json({message:" All Quiz fetched successfully", success:true, data:allQuiz});  
+        }else{
+            res.status(404).json({message:"No Quiz to show", success:true, data:allQuiz});  
+
+        }
+    } catch (error) {
+        throw new ApiError(httpStatus.INTERNAL_SERVER_ERROR, "Failed to get quiz's")
+    }
+})
+
+
+const getPublishedQuizById = catchAsync(async(req,res)=>{
+    try {
+        const quiz = await QuizServiceInstance.publishedQuizById(req.params.quizId);
+        if(quiz){
+        res.status(200).json({message:"Quiz fetched successfully", success:true, data:quiz})
+        }else{
+        res.status(404).json({message:"Quiz Not exists", success:false, data:quiz})
+
+        }
+    } catch (error) {
+        throw new ApiError(httpStatus.INTERNAL_SERVER_ERROR, "Failed to get quiz");
+    }
+})
+
+
+
+module.exports = {createQuiz, getAllQuiz, getQuizById, updateQuiz, deleteQuiz, addQuizQuestion,updateQuizQuestion,deleteQuizQuestion,allPublishedQuiz,getPublishedQuizById }

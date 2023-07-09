@@ -1,5 +1,7 @@
 const { Report, Users, Quiz } = require("../models")
 
+// Class to perform CRUD operation on reports collection in MongoDB using Report model
+
 class ReportService {
 
     submit = async (quizId, userId, answersData) => {
@@ -77,7 +79,7 @@ class ReportService {
                     $regex: userName,
                 },
             });
-            
+
             const matchedUserIds = users.map((user) => user._id);
 
             const getReport = await Report.find({

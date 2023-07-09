@@ -1,6 +1,8 @@
 const {Quiz} = require("../models");
 const {Question} = require("../models")
 
+// Class to perform CRUD operation on quizs collection in mongoDB using Quiz model
+
 class QuizService{
     create = async(quizData, createdBy)=>{
         try {
@@ -22,9 +24,28 @@ class QuizService{
         }
     }
 
+    getAllPublishedQuiz = async()=>{
+        try {
+            const allQuiz = await Quiz.find({}).where('isPublished').equals(true).select("-createdBy");
+            return allQuiz;
+        } catch (error) {
+            throw error;
+        }
+    }
+
+
     quizById = async(quizId)=>{
         try {
             const quiz = await Quiz.findById(quizId).populate("questions")
+            return quiz; 
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    publishedQuizById =async(quizId)=>{
+        try {
+            const quiz = await Quiz.findById(quizId).populate("questions", "-correctOptions").select("-createdBy")
             return quiz; 
         } catch (error) {
             throw error;

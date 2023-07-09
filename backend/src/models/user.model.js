@@ -2,7 +2,7 @@ const { string } = require("joi");
 const mongoose = require("mongoose");
 const validator = require("validator");
 
-
+// mongoose user schema for User model
 const userSchema = new mongoose.Schema({
         fullName:{
             type:String,
@@ -33,6 +33,7 @@ const userSchema = new mongoose.Schema({
     timestamps:true
 })
 
+// creating a mongoose model for Users using userSchema
 
 const Users = mongoose.model("users", userSchema);
 

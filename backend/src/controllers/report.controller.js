@@ -4,6 +4,10 @@ const ApiError = require("../utils/ApiError");
 const catchAsync = require("../utils/catchAsync");
 const httpStatus = require("http-status");
 
+/**
+ * Utilizing the Report Service Layer to submit answer and get detailed report/result from mongoDB, 
+ * and return them as reponse for routes requesting these controllers
+ */
 
 
 const submitReport = catchAsync(async(req,res)=>{

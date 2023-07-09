@@ -1,5 +1,8 @@
+
 const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Schema;
+
+// mongoose schema for quiz model
 const quizSchema = new mongoose.Schema({
     quizName:{
         type:String,
@@ -24,11 +27,18 @@ const quizSchema = new mongoose.Schema({
         ref:"users",
         required:true
     },
-    questions:[{type:ObjectId, ref:"questions"}]
+    questions:[{type:ObjectId, ref:"questions"}],
+
+    isPublished:{
+        type: Boolean,
+        required:true,
+        default:false
+    }
 },
 {timestamps:true}
 )
 
+//creating a quiz model
 const Quiz = mongoose.model("quizs", quizSchema);
 
 module.exports ={ Quiz}

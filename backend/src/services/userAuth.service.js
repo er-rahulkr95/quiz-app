@@ -3,6 +3,8 @@ const UserServiceInstance = new UserService();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+// Class to perform Authorization operation like encrypting a password on registration or generating a token for user on login.
+
 class UserAuthService {
     signup =async(userDetails)=>{
         try {
@@ -54,6 +56,7 @@ class UserAuthService {
      }   
  
     secret = process.env.SECRET
+    
     generateToken = async(userId)=>{
             try {
                 const payload = {userId};

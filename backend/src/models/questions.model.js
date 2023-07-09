@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Schema;
 
+//mongoose schema for question model
 const questionSchema = new mongoose.Schema({
         question:{
             type:String,
@@ -22,6 +23,9 @@ const questionSchema = new mongoose.Schema({
 },{
     timestamps:true
 })
+
+
+// creating a mongoose model for Question using question schema
 
 const Question = mongoose.model("questions",questionSchema);
 

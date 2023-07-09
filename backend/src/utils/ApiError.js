@@ -1,3 +1,5 @@
+// class to perform action for handling error
+
 class ApiError extends Error{
     constructor(statusCode, message, isOperational=true, stack=""){
         super(message);
