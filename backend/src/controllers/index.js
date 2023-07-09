@@ -13,3 +13,7 @@ module.exports.addQuizQuestion = require("./quizs.controller").addQuizQuestion;
 module.exports.updateQuizQuestion = require("./quizs.controller").updateQuizQuestion;
 module.exports.deleteQuizQuestion = require("./quizs.controller").deleteQuizQuestion;
 
+module.exports.submitReport = require("./report.controller").submitReport;
+module.exports.getReportByQuizId = require("./report.controller").getReportByQuizId;
+module.exports.getReportByUserId = require("./report.controller").getReportByUserId;
+module.exports.getAllReport = require("./report.controller").getAllReport;

@@ -1,4 +1,3 @@
-const { error } = require("winston");
 const {Quiz} = require("../models");
 const {Question} = require("../models")
 

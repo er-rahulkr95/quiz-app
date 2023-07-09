@@ -8,6 +8,7 @@ const ApiError = require("./utils/ApiError");
 const helmet  = require("helmet");
 const authRoutes = require("./routes/userAuth.route")
 const quizRoutes = require("./routes/quiz.route")
+const reportRoutes = require("./routes/report.route")
 const configurePassport = require("./config/passport")
 const passport = require("passport");
 const app= express();
@@ -43,6 +44,7 @@ app.options("*",cors());
 // routes
 app.use("/auth",authRoutes);
 app.use("/quiz",quizRoutes);
+app.use("/report",reportRoutes);
 
 // send back a 404 error for any unknown api request
 app.use((req,res,next)=>{
