@@ -15,6 +15,7 @@ const app= express();
 
 configurePassport(passport);
 
+// HTTP request logger middleware
 app.use(morgan('dev'));
 
 // set security HTTP headers
@@ -42,8 +43,13 @@ app.options("*",cors());
 
 
 // routes
+// routes for registration and login
 app.use("/auth",authRoutes);
+
+// route for quiz
 app.use("/quiz",quizRoutes);
+
+// route for report/result
 app.use("/report",reportRoutes);
 
 // send back a 404 error for any unknown api request
