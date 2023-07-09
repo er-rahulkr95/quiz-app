@@ -29,7 +29,7 @@ class UserAuthService {
             const userLoggedInDetail = await this.verifyPassword(loginData.email,loginData.password);
             if(userLoggedInDetail){
                 const token = await this.generateToken(userLoggedInDetail._id);
-                return {isLoggedIn: true, token:token,fullName:userLoggedInDetail.fullName, role:userLoggedInDetail.role}
+                return {isLoggedIn: true, token:token,fullName:userLoggedInDetail.fullName, role:userLoggedInDetail.role, userId:userLoggedInDetail._id}
             }else{
                 return {isLoggedIn:false}
             }

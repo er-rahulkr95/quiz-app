@@ -22,4 +22,21 @@ const checkUserExistsInDB = catchAsync(async(req,res,next)=>{
     }
 })
 
-module.exports = {checkUserExistsInDB };
+const isAdmin = catchAsync(async(req,res,next)=>{
+    try {
+        const user  = await UserServiceInstance.findWithId(req.user._id);
+        if(user.role === "admin"){
+            next()
+        }else{
+            res.status(401).json({message: "You are not authorized to create quiz", success:false})
+        }
+  
+    } catch (error) {
+        throw new ApiError(
+            httpStatus.INTERNAL_SERVER_ERROR,
+            "Could not find user"
+          );
+    }
+})
+
+module.exports = {checkUserExistsInDB, isAdmin };

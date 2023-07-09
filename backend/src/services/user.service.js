@@ -22,6 +22,15 @@ class UserService{
             throw error;
         }
     }
+
+    findWithId = async(id) =>{
+        try {
+            const user =  await Users.findById(id);
+            return user;
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
 

@@ -7,7 +7,12 @@ const {errorHandlers} = require("./middlewares");
 const ApiError = require("./utils/ApiError");
 const helmet  = require("helmet");
 const authRoutes = require("./routes/userAuth.route")
+const quizRoutes = require("./routes/quiz.route")
+const configurePassport = require("./config/passport")
+const passport = require("passport");
 const app= express();
+
+configurePassport(passport);
 
 app.use(morgan('dev'));
 
@@ -37,6 +42,7 @@ app.options("*",cors());
 
 // routes
 app.use("/auth",authRoutes);
+app.use("/quiz",quizRoutes);
 
 // send back a 404 error for any unknown api request
 app.use((req,res,next)=>{
