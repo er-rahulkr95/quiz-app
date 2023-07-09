@@ -1,0 +1,3909 @@
+{
+	"info": {
+		"_postman_id": "43e0833c-946a-4c29-9d13-39029d4eb714",
+		"name": "Quiz-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24700387"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"rk6\",\r\n    \"email\":\"rk6@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"role\":\"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						},
+						"description": "To register a new user"
+					},
+					"response": [
+						{
+							"name": "registered user using admin role",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\":\"rk4\",\r\n    \"email\":\"rk4@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"role\":\"admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "99"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"63-miLCA829jADb1uNdHgIjwJ2vPQs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Jul 2023 17:46:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User Registered Successfully\",\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"64aaf2894398f788356b75e7\"\n    }\n}"
+						},
+						{
+							"name": "registering user using role as user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\":\"rk5\",\r\n    \"email\":\"rk5@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"role\":\"user\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "102"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"66-4VZ6+veU1+47wlY3IjdfxMZN/qQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Jul 2023 19:40:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User Registered Successfully\",\n    \"success\": true,\n    \"data\": {\n        \"userId\": \"64ab0d343ae0f0ec67621d63\"\n    }\n}"
+						},
+						{
+							"name": "registering user using same email if ....  email id must be unique",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\":\"rk5\",\r\n    \"email\":\"rk5@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"role\":\"user\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "289"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"121-RdWi839y/ngfbfmJUDGoBiw9s9g\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Jul 2023 19:41:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 409,\n    \"message\": \"User already registered\",\n    \"stack\": \"Error: User already registered\\n    at C:\\\\Users\\\\Rahul Kumar\\\\Documents\\\\criodo\\\\quiz-app\\\\backend\\\\src\\\\controllers\\\\userAuth.controller.js:14:15\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rk5@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "For Login a registered User"
+					},
+					"response": [
+						{
+							"name": "Valid registered User Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"rk4@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "313"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"139-Xh70tn9GXxgJq07DTgoL82LJDeQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Jul 2023 17:48:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Log In Successful\",\n    \"data\": {\n        \"isLoggedIn\": true,\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGFhZjI4OTQzOThmNzg4MzU2Yjc1ZTciLCJpYXQiOjE2ODg5MjQ4ODgsImV4cCI6MTY4OTAxMTI4OH0.qijCK04T0G2HVRgjjV1LgEgiMFsiNQtLqkcGPwK7NBg\",\n        \"fullName\": \"rk4\",\n        \"role\": \"admin\",\n        \"userId\": \"64aaf2894398f788356b75e7\"\n    }\n}"
+						},
+						{
+							"name": "unregistered user login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"rk7@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31-kU/w0yl2DO+a5BvTKF/XxQztCrI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Jul 2023 19:44:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User Does Not Exist\",\n    \"success\": false\n}"
+						},
+						{
+							"name": "login as roles as user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"rk5@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "312"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"138-YbMRPfT6YC+O7ArOmx01F00OOo4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Jul 2023 20:27:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Log In Successful\",\n    \"data\": {\n        \"isLoggedIn\": true,\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGFiMGQzNDNhZTBmMGVjNjc2MjFkNjMiLCJpYXQiOjE2ODg5MzQ0MjgsImV4cCI6MTY4OTAyMDgyOH0.tM32SAzzaEhtLCk-Yw_1um7FlMrwmn1qV02Zryj0yRc\",\n        \"fullName\": \"rk5\",\n        \"role\": \"user\",\n        \"userId\": \"64ab0d343ae0f0ec67621d63\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Quiz and Questions",
+			"item": [
+				{
+					"name": "question",
+					"item": [
+						{
+							"name": "Adding new question for particular quiz",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"question\": \"How to stop an interval timer in Javascript?\",\r\n            \"correctOptions\": \"A\",\r\n            \"options\": {\r\n                \"A\": \"clearInterval\",\r\n                \"B\": \"clearTimer\",\r\n                \"C\": \"intervalOver\",\r\n                \"D\": \"None of the above\"\r\n            }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/quiz/question/{{quizId}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"quiz",
+										"question",
+										"{{quizId}}"
+									]
+								},
+								"description": "Adds a question to the particular quiz "
+							},
+							"response": [
+								{
+									"name": "Adding new question to particular quiz by admin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n     \"question\": \"How to stop an interval timer in Javascript?\",\r\n            \"correctOptions\": \"A\",\r\n            \"options\": {\r\n                \"A\": \"clearInterval\",\r\n                \"B\": \"clearTimer\",\r\n                \"C\": \"intervalOver\",\r\n                \"D\": \"None of the above\"\r\n            }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/quiz/question/{{quizId}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"question",
+												"{{quizId}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "793"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"319-X88IGvn7Qsq7JBRNCe+3aCtXGds\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 13:49:44 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Question Added SuccessFully\",\n    \"success\": true,\n    \"data\": {\n        \"saveQuestion\": {\n            \"question\": \"How to stop an interval timer in Javascript?\",\n            \"correctOptions\": \"A\",\n            \"options\": {\n                \"A\": \"clearInterval\",\n                \"B\": \"clearTimer\",\n                \"C\": \"intervalOver\",\n                \"D\": \"None of the above\"\n            },\n            \"quiz\": \"64aab7fb9822da31099b8c70\",\n            \"_id\": \"64aabaf79822da31099b8c94\",\n            \"createdAt\": \"2023-07-09T13:49:43.882Z\",\n            \"updatedAt\": \"2023-07-09T13:49:43.882Z\",\n            \"__v\": 0\n        },\n        \"quiz\": {\n            \"_id\": \"64aab7fb9822da31099b8c70\",\n            \"quizName\": \"javascript2\",\n            \"duration\": 1,\n            \"totalMarks\": 10,\n            \"passingMarks\": 3,\n            \"createdBy\": \"64a997e9945afd3c91ea9501\",\n            \"questions\": [\n                \"64aab9369822da31099b8c80\",\n                \"64aab9ac9822da31099b8c85\",\n                \"64aab9fe9822da31099b8c8a\",\n                \"64aabaa19822da31099b8c8f\",\n                \"64aabaf79822da31099b8c94\"\n            ],\n            \"createdAt\": \"2023-07-09T13:36:59.997Z\",\n            \"updatedAt\": \"2023-07-09T13:49:44.150Z\",\n            \"__v\": 0\n        }\n    }\n}"
+								},
+								{
+									"name": "not authorize to add question by non admin user",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n     \"question\": \"How to stop an interval timer in Javascript?\",\r\n            \"correctOptions\": \"A\",\r\n            \"options\": {\r\n                \"A\": \"clearInterval\",\r\n                \"B\": \"clearTimer\",\r\n                \"C\": \"intervalOver\",\r\n                \"D\": \"None of the above\"\r\n            }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/quiz/question/{{quizId}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"question",
+												"{{quizId}}"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "52"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"34-5isGAcFKO173e/mQbRNy/YKxD30\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 20:43:16 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"You are not authorized\",\n    \"success\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Question",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"correctOptions\": \"C\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/quiz/question/{{questionId}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"quiz",
+										"question",
+										"{{questionId}}"
+									]
+								},
+								"description": "Edit a particular question"
+							},
+							"response": [
+								{
+									"name": "Updating the question by admin",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"correctOptions\": \"C\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/quiz/question/{{questionId}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"question",
+												"{{questionId}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "403"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"193-sVVA57uOGFeH8TphdfYnnCs+Nuo\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 13:55:07 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Question updated SuccessFully\",\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"64aab9369822da31099b8c80\",\n        \"question\": \"Which of the following keywords is used to define a variable in Javascript?\",\n        \"correctOptions\": \"C\",\n        \"options\": {\n            \"A\": \"Var\",\n            \"B\": \"Let\",\n            \"C\": \"both A & B\",\n            \"D\": \"None of the above\"\n        },\n        \"quiz\": \"64aab7fb9822da31099b8c70\",\n        \"createdAt\": \"2023-07-09T13:42:14.075Z\",\n        \"updatedAt\": \"2023-07-09T13:55:07.159Z\",\n        \"__v\": 0\n    }\n}"
+								},
+								{
+									"name": "not authorize to update a question by non admin user",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"correctOptions\": \"C\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/quiz/question/{{questionId}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"question",
+												"{{questionId}}"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "52"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"34-5isGAcFKO173e/mQbRNy/YKxD30\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 20:40:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"You are not authorized\",\n    \"success\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Question by admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/quiz/question/{{questionId}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"quiz",
+										"question",
+										"{{questionId}}"
+									]
+								},
+								"description": "Delete a particular question from quiz"
+							},
+							"response": [
+								{
+									"name": "Question deleted by admin only for addmin view",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/quiz/question/{{questionId}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"question",
+												"{{questionId}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "654"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"28e-lKt1N7Mafog9ick9ZsmAKiAzChc\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 08 Jul 2023 23:06:40 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Question Deleted SuccessFully\",\n    \"success\": true,\n    \"data\": {\n        \"questionDeleted\": {\n            \"_id\": \"64a9ebb582b071416ca00e88\",\n            \"question\": \"What is M in HTML?\",\n            \"correctOptions\": [\n                \"B\"\n            ],\n            \"options\": {\n                \"A\": \"Makeup\",\n                \"B\": \"Markup\",\n                \"C\": \"Mutate\",\n                \"D\": \"Martin Luther\"\n            },\n            \"quiz\": \"64a9bfa730a241e101e9b457\",\n            \"createdAt\": \"2023-07-08T23:05:25.964Z\",\n            \"updatedAt\": \"2023-07-08T23:05:25.964Z\",\n            \"__v\": 0\n        },\n        \"deleteFromQuiz\": {\n            \"_id\": \"64a9bfa730a241e101e9b457\",\n            \"quizName\": \"javascript\",\n            \"duration\": 1,\n            \"totalMarks\": 10,\n            \"passingMarks\": 3,\n            \"createdBy\": \"64a997e9945afd3c91ea9501\",\n            \"questions\": [\n                \"64a9e265b7d34e73c5bf40aa\"\n            ],\n            \"createdAt\": \"2023-07-08T19:57:27.377Z\",\n            \"updatedAt\": \"2023-07-08T23:06:40.559Z\",\n            \"__v\": 0\n        }\n    }\n}"
+								},
+								{
+									"name": "not authorized to delete a question by non admin user",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/quiz/question/{{questionId}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"question",
+												"{{questionId}}"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "52"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"34-5isGAcFKO173e/mQbRNy/YKxD30\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 20:42:19 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"You are not authorized\",\n    \"success\": false\n}"
+								}
+							]
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Quiz",
+					"item": [
+						{
+							"name": "Get all quiz created by admin for admin view",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/quiz/all-quiz",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"quiz",
+										"all-quiz"
+									]
+								},
+								"description": "Get all Quiz"
+							},
+							"response": [
+								{
+									"name": "get all quiz details for admin view",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/quiz/all-quiz",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"all-quiz"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "994"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3e2-8r9BACAQsEHSjMXOqFhWsRBr+Xo\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 19:50:01 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \" All Quiz fetched successfully\",\n    \"success\": true,\n    \"data\": [\n        {\n            \"isPublished\": false,\n            \"_id\": \"64a99bcc3cade1a05d4f8540\",\n            \"quizName\": \"HTML/CSS\",\n            \"duration\": 1,\n            \"totalMarks\": 10,\n            \"passingMarks\": 3,\n            \"createdBy\": \"64a997e9945afd3c91ea9501\",\n            \"questions\": [],\n            \"createdAt\": \"2023-07-08T17:24:28.765Z\",\n            \"updatedAt\": \"2023-07-08T17:24:28.765Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"64aab7fb9822da31099b8c70\",\n            \"quizName\": \"javascript2\",\n            \"duration\": 1,\n            \"totalMarks\": 5,\n            \"passingMarks\": 3,\n            \"createdBy\": \"64a997e9945afd3c91ea9501\",\n            \"questions\": [\n                \"64aab9369822da31099b8c80\",\n                \"64aab9ac9822da31099b8c85\",\n                \"64aab9fe9822da31099b8c8a\",\n                \"64aabaa19822da31099b8c8f\",\n                \"64aabaf79822da31099b8c94\"\n            ],\n            \"createdAt\": \"2023-07-09T13:36:59.997Z\",\n            \"updatedAt\": \"2023-07-09T18:56:12.350Z\",\n            \"__v\": 0,\n            \"isPublished\": true\n        },\n        {\n            \"isPublished\": false,\n            \"_id\": \"64aaf402a855956798cc6a28\",\n            \"quizName\": \"javascript3\",\n            \"duration\": 1,\n            \"totalMarks\": 5,\n            \"passingMarks\": 3,\n            \"createdBy\": \"64a997e9945afd3c91ea9501\",\n            \"questions\": [],\n            \"createdAt\": \"2023-07-09T17:53:06.811Z\",\n            \"updatedAt\": \"2023-07-09T17:53:06.811Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+								},
+								{
+									"name": "not authorized to view the all quiz as non admin user",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/quiz/all-quiz",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"all-quiz"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "52"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"34-5isGAcFKO173e/mQbRNy/YKxD30\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 20:30:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"You are not authorized\",\n    \"success\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Get particular quiz details along with question",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/quiz/id/{{quizId}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"quiz",
+										"id",
+										"{{quizId}}"
+									]
+								},
+								"description": "Get quiz by quizId along with its questions "
+							},
+							"response": [
+								{
+									"name": "Get particular quiz detail using quiz id for admin view, having question and its correct answer",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/quiz/id/{{quizId}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"id",
+												"{{quizId}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"6e8-+Kx30qucfZmguD1YYEF/zH5/r6Y\""
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 19:14:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Quiz fetched successfully\",\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"64aab7fb9822da31099b8c70\",\n        \"quizName\": \"javascript2\",\n        \"duration\": 1,\n        \"totalMarks\": 5,\n        \"passingMarks\": 3,\n        \"questions\": [\n            {\n                \"_id\": \"64aab9369822da31099b8c80\",\n                \"question\": \"Which of the following keywords is used to define a variable in Javascript?\",\n                \"options\": {\n                    \"A\": \"Var\",\n                    \"B\": \"Let\",\n                    \"C\": \"both A & B\",\n                    \"D\": \"None of the above\"\n                },\n                \"quiz\": \"64aab7fb9822da31099b8c70\",\n                \"createdAt\": \"2023-07-09T13:42:14.075Z\",\n                \"updatedAt\": \"2023-07-09T13:55:07.159Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64aab9ac9822da31099b8c85\",\n                \"question\": \"How can a datatype be declared to be a constant type?\",\n                \"options\": {\n                    \"A\": \"Var\",\n                    \"B\": \"Let\",\n                    \"C\": \"const\",\n                    \"D\": \"constant\"\n                },\n                \"quiz\": \"64aab7fb9822da31099b8c70\",\n                \"createdAt\": \"2023-07-09T13:44:12.890Z\",\n                \"updatedAt\": \"2023-07-09T13:44:12.890Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64aab9fe9822da31099b8c8a\",\n                \"question\": \"What keyword is used to check whether a given property is valid or not?\",\n                \"options\": {\n                    \"A\": \"in\",\n                    \"B\": \"is in\",\n                    \"C\": \"exists\",\n                    \"D\": \"lies\"\n                },\n                \"quiz\": \"64aab7fb9822da31099b8c70\",\n                \"createdAt\": \"2023-07-09T13:45:34.020Z\",\n                \"updatedAt\": \"2023-07-09T13:45:34.020Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64aabaa19822da31099b8c8f\",\n                \"question\": \"Which of the following is not a Javascript framework?\",\n                \"options\": {\n                    \"A\": \"node\",\n                    \"B\": \"vue\",\n                    \"C\": \"react\",\n                    \"D\": \"cassandra\"\n                },\n                \"quiz\": \"64aab7fb9822da31099b8c70\",\n                \"createdAt\": \"2023-07-09T13:48:17.512Z\",\n                \"updatedAt\": \"2023-07-09T13:48:17.512Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64aabaf79822da31099b8c94\",\n                \"question\": \"How to stop an interval timer in Javascript?\",\n                \"options\": {\n                    \"A\": \"clearInterval\",\n                    \"B\": \"clearTimer\",\n                    \"C\": \"intervalOver\",\n                    \"D\": \"None of the above\"\n                },\n                \"quiz\": \"64aab7fb9822da31099b8c70\",\n                \"createdAt\": \"2023-07-09T13:49:43.882Z\",\n                \"updatedAt\": \"2023-07-09T13:49:43.882Z\",\n                \"__v\": 0\n            }\n        ],\n        \"createdAt\": \"2023-07-09T13:36:59.997Z\",\n        \"updatedAt\": \"2023-07-09T18:56:12.350Z\",\n        \"__v\": 0,\n        \"isPublished\": true\n    }\n}"
+								},
+								{
+									"name": "not authorized to get particular quiz details by non admin user",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/quiz/id/{{quizId}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"id",
+												"{{quizId}}"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "52"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"34-5isGAcFKO173e/mQbRNy/YKxD30\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 20:32:08 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"You are not authorized\",\n    \"success\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Update particular quiz details (note:  do not update question)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"isPublished\":true,\r\n    \"totalMarks\": 5,\r\n    \"passingMarks\": 3\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/quiz/id/{{quizId}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"quiz",
+										"id",
+										"{{quizId}}"
+									]
+								},
+								"description": "Edit and update a only Quiz detail not questions "
+							},
+							"response": [
+								{
+									"name": "Particular Quiz update by admin",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"isPublished\":true,\r\n    \"totalMarks\": 5,\r\n    \"passingMarks\": 3\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/quiz/id/{{quizId}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"id",
+												"{{quizId}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "459"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1cb-n8xDO2JDQ2BdE2Hq6ctWfqTPGIc\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 20:05:23 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Quiz updated successfully\",\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"64aab7fb9822da31099b8c70\",\n        \"quizName\": \"javascript2\",\n        \"duration\": 1,\n        \"totalMarks\": 5,\n        \"passingMarks\": 3,\n        \"createdBy\": \"64a997e9945afd3c91ea9501\",\n        \"questions\": [\n            \"64aab9369822da31099b8c80\",\n            \"64aab9ac9822da31099b8c85\",\n            \"64aab9fe9822da31099b8c8a\",\n            \"64aabaa19822da31099b8c8f\",\n            \"64aabaf79822da31099b8c94\"\n        ],\n        \"createdAt\": \"2023-07-09T13:36:59.997Z\",\n        \"updatedAt\": \"2023-07-09T20:05:22.835Z\",\n        \"__v\": 0,\n        \"isPublished\": true\n    }\n}"
+								},
+								{
+									"name": "not authorized to update quiz by non admin user",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"isPublished\":true,\r\n    \"totalMarks\": 5,\r\n    \"passingMarks\": 3\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/quiz/id/{{quizId}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"id",
+												"{{quizId}}"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "52"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"34-5isGAcFKO173e/mQbRNy/YKxD30\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 20:33:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"You are not authorized\",\n    \"success\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Quiz Delete by admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/quiz/id/{{quizIdToDelete}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"quiz",
+										"id",
+										"{{quizIdToDelete}}"
+									]
+								},
+								"description": "delete a quiz along with its question from data base"
+							},
+							"response": [
+								{
+									"name": "Quiz deletion along with its questions",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/quiz/id/{{quizIdToDelete}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"id",
+												"{{quizIdToDelete}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "332"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"14c-JwI2iuAkmqG6y6nZEd7NpDI9D20\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 13:39:16 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Quiz deleted successfully\",\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"64a9bfa730a241e101e9b457\",\n        \"quizName\": \"javascript\",\n        \"duration\": 1,\n        \"totalMarks\": 10,\n        \"passingMarks\": 3,\n        \"createdBy\": \"64a997e9945afd3c91ea9501\",\n        \"questions\": [\n            \"64a9e265b7d34e73c5bf40aa\"\n        ],\n        \"createdAt\": \"2023-07-08T19:57:27.377Z\",\n        \"updatedAt\": \"2023-07-08T23:06:40.559Z\",\n        \"__v\": 0\n    }\n}"
+								},
+								{
+									"name": "not authorize to delete quiz for non admin user",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/quiz/id/{{quizIdToDelete}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"id",
+												"{{quizIdToDelete}}"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "52"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"34-5isGAcFKO173e/mQbRNy/YKxD30\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 20:34:48 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"You are not authorized\",\n    \"success\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Create Quiz",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quizName\" : \"javascript4\",\r\n    \"duration\":1,\r\n    \"totalMarks\":5,\r\n    \"passingMarks\":3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/quiz/add",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"quiz",
+										"add"
+									]
+								},
+								"description": "only admin can create a new quiz"
+							},
+							"response": [
+								{
+									"name": "Creating a new Quiz by admin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"quizName\" : \"javascript3\",\r\n    \"duration\":1,\r\n    \"totalMarks\":5,\r\n    \"passingMarks\":3\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/quiz/add",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"add"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "124"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"7c-NCNP2KGSHaBayFH9kNHWFMl/SyI\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 17:53:07 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Quiz created Successfully\",\n    \"success\": true,\n    \"data\": {\n        \"quizName\": \"javascript3\",\n        \"quizId\": \"64aaf402a855956798cc6a28\"\n    }\n}"
+								},
+								{
+									"name": "not authorized to create as normal user",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"quizName\" : \"javascript4\",\r\n    \"duration\":1,\r\n    \"totalMarks\":5,\r\n    \"passingMarks\":3\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/quiz/add",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"add"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"43-oC1DpiWVOxe4T0RykI8pj1D+Wqw\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 20:28:12 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"You are not authorized to create quiz\",\n    \"success\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Get published all Quiz  for  students view",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/quiz/published/all-quiz",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"quiz",
+										"published",
+										"all-quiz"
+									]
+								},
+								"description": "Gets only all published quiz for role as user"
+							},
+							"response": [
+								{
+									"name": "Get published Quiz details for users for students view",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/quiz/published/all-quiz",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"published",
+												"all-quiz"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "427"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1ab-AKdhvvk8qUB2fkxfN3zIy6apZ9s\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 20:19:21 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \" All Quiz fetched successfully\",\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"64aab7fb9822da31099b8c70\",\n            \"quizName\": \"javascript2\",\n            \"duration\": 1,\n            \"totalMarks\": 5,\n            \"passingMarks\": 3,\n            \"questions\": [\n                \"64aab9369822da31099b8c80\",\n                \"64aab9ac9822da31099b8c85\",\n                \"64aab9fe9822da31099b8c8a\",\n                \"64aabaa19822da31099b8c8f\",\n                \"64aabaf79822da31099b8c94\"\n            ],\n            \"createdAt\": \"2023-07-09T13:36:59.997Z\",\n            \"updatedAt\": \"2023-07-09T20:05:22.835Z\",\n            \"__v\": 0,\n            \"isPublished\": true\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get published particular quiz Details along with question and option for student view",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/quiz/published/id/{{quizId}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"quiz",
+										"published",
+										"id",
+										"{{quizId}}"
+									]
+								},
+								"description": "Get Published particular Quiz Details along with question and option for student view"
+							},
+							"response": [
+								{
+									"name": "Get Published particular Quiz Details along with question and option for student view",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/quiz/published/id/{{quizId}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"published",
+												"id",
+												"{{quizId}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin, Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"6e8-ZYKkWKUbY1e3rGymQR+JcRsMmuQ\""
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 09 Jul 2023 20:23:00 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Quiz fetched successfully\",\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"64aab7fb9822da31099b8c70\",\n        \"quizName\": \"javascript2\",\n        \"duration\": 1,\n        \"totalMarks\": 5,\n        \"passingMarks\": 3,\n        \"questions\": [\n            {\n                \"_id\": \"64aab9369822da31099b8c80\",\n                \"question\": \"Which of the following keywords is used to define a variable in Javascript?\",\n                \"options\": {\n                    \"A\": \"Var\",\n                    \"B\": \"Let\",\n                    \"C\": \"both A & B\",\n                    \"D\": \"None of the above\"\n                },\n                \"quiz\": \"64aab7fb9822da31099b8c70\",\n                \"createdAt\": \"2023-07-09T13:42:14.075Z\",\n                \"updatedAt\": \"2023-07-09T13:55:07.159Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64aab9ac9822da31099b8c85\",\n                \"question\": \"How can a datatype be declared to be a constant type?\",\n                \"options\": {\n                    \"A\": \"Var\",\n                    \"B\": \"Let\",\n                    \"C\": \"const\",\n                    \"D\": \"constant\"\n                },\n                \"quiz\": \"64aab7fb9822da31099b8c70\",\n                \"createdAt\": \"2023-07-09T13:44:12.890Z\",\n                \"updatedAt\": \"2023-07-09T13:44:12.890Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64aab9fe9822da31099b8c8a\",\n                \"question\": \"What keyword is used to check whether a given property is valid or not?\",\n                \"options\": {\n                    \"A\": \"in\",\n                    \"B\": \"is in\",\n                    \"C\": \"exists\",\n                    \"D\": \"lies\"\n                },\n                \"quiz\": \"64aab7fb9822da31099b8c70\",\n                \"createdAt\": \"2023-07-09T13:45:34.020Z\",\n                \"updatedAt\": \"2023-07-09T13:45:34.020Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64aabaa19822da31099b8c8f\",\n                \"question\": \"Which of the following is not a Javascript framework?\",\n                \"options\": {\n                    \"A\": \"node\",\n                    \"B\": \"vue\",\n                    \"C\": \"react\",\n                    \"D\": \"cassandra\"\n                },\n                \"quiz\": \"64aab7fb9822da31099b8c70\",\n                \"createdAt\": \"2023-07-09T13:48:17.512Z\",\n                \"updatedAt\": \"2023-07-09T13:48:17.512Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64aabaf79822da31099b8c94\",\n                \"question\": \"How to stop an interval timer in Javascript?\",\n                \"options\": {\n                    \"A\": \"clearInterval\",\n                    \"B\": \"clearTimer\",\n                    \"C\": \"intervalOver\",\n                    \"D\": \"None of the above\"\n                },\n                \"quiz\": \"64aab7fb9822da31099b8c70\",\n                \"createdAt\": \"2023-07-09T13:49:43.882Z\",\n                \"updatedAt\": \"2023-07-09T13:49:43.882Z\",\n                \"__v\": 0\n            }\n        ],\n        \"createdAt\": \"2023-07-09T13:36:59.997Z\",\n        \"updatedAt\": \"2023-07-09T20:05:22.835Z\",\n        \"__v\": 0,\n        \"isPublished\": true\n    }\n}"
+								}
+							]
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "Get Report for particular quiz",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/report/quiz/{{quizId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"report",
+								"quiz",
+								"{{quizId}}"
+							]
+						},
+						"description": "Gets all the report of all user for particular quiz by quizId"
+					},
+					"response": [
+						{
+							"name": "Get Report for attempted quiz for after quiz submission view",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/report/quiz/{{quizId}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"report",
+										"quiz",
+										"{{quizId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "703"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2bf-aR4h67KTmhE1BuxYaSDos6Lkvfo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Jul 2023 14:18:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Report Fetched Succesfully\",\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"64aac0cb9822da31099b8cb1\",\n            \"user\": \"64a997e9945afd3c91ea9501\",\n            \"quiz\": \"64aab7fb9822da31099b8c70\",\n            \"result\": {\n                \"correctAnswer\": [],\n                \"wrongAnswer\": [],\n                \"verdict\": \"Fail\"\n            },\n            \"createdAt\": \"2023-07-09T14:14:35.449Z\",\n            \"updatedAt\": \"2023-07-09T14:14:35.449Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"64aac1437cee974d6c1f10d5\",\n            \"user\": \"64a997e9945afd3c91ea9501\",\n            \"quiz\": \"64aab7fb9822da31099b8c70\",\n            \"result\": {\n                \"correctAnswer\": [\n                    \"64aab9369822da31099b8c80\",\n                    \"64aab9ac9822da31099b8c85\",\n                    \"64aabaa19822da31099b8c8f\"\n                ],\n                \"wrongAnswer\": [\n                    \"64aab9fe9822da31099b8c8a\",\n                    \"64aabaf79822da31099b8c94\"\n                ],\n                \"verdict\": \"Pass\"\n            },\n            \"createdAt\": \"2023-07-09T14:16:35.683Z\",\n            \"updatedAt\": \"2023-07-09T14:16:35.683Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Post answer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n                \"64aab9369822da31099b8c80\":\"C\",\r\n                \"64aab9ac9822da31099b8c85\":\"C\",\r\n                \"64aab9fe9822da31099b8c8a\":\"D\",\r\n                \"64aabaa19822da31099b8c8f\":\"D\",\r\n                \"64aabaf79822da31099b8c94\":\"B\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/report/{{quizId}}/submit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"report",
+								"{{quizId}}",
+								"submit"
+							]
+						},
+						"description": "Users can submit the answer for the particular quiz to the db"
+					},
+					"response": [
+						{
+							"name": "Submitting quiz answers",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n                \"64aab9369822da31099b8c80\":\"C\",\r\n                \"64aab9ac9822da31099b8c85\":\"C\",\r\n                \"64aab9fe9822da31099b8c8a\":\"D\",\r\n                \"64aabaa19822da31099b8c8f\":\"D\",\r\n                \"64aabaf79822da31099b8c94\":\"B\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/report/{{quizId}}/submit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"report",
+										"{{quizId}}",
+										"submit"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"775-Y/9NkOyC4V/7UBWYqnbb/+HE4SI\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Jul 2023 14:16:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Quiz Answers submitted Succesfully\",\n    \"success\": true,\n    \"data\": {\n        \"user\": \"64a997e9945afd3c91ea9501\",\n        \"quiz\": \"64aab7fb9822da31099b8c70\",\n        \"result\": {\n            \"correctAnswer\": [\n                {\n                    \"_id\": \"64aab9369822da31099b8c80\",\n                    \"question\": \"Which of the following keywords is used to define a variable in Javascript?\",\n                    \"correctOptions\": \"C\",\n                    \"options\": {\n                        \"A\": \"Var\",\n                        \"B\": \"Let\",\n                        \"C\": \"both A & B\",\n                        \"D\": \"None of the above\"\n                    },\n                    \"quiz\": \"64aab7fb9822da31099b8c70\",\n                    \"createdAt\": \"2023-07-09T13:42:14.075Z\",\n                    \"updatedAt\": \"2023-07-09T13:55:07.159Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"64aab9ac9822da31099b8c85\",\n                    \"question\": \"How can a datatype be declared to be a constant type?\",\n                    \"correctOptions\": \"C\",\n                    \"options\": {\n                        \"A\": \"Var\",\n                        \"B\": \"Let\",\n                        \"C\": \"const\",\n                        \"D\": \"constant\"\n                    },\n                    \"quiz\": \"64aab7fb9822da31099b8c70\",\n                    \"createdAt\": \"2023-07-09T13:44:12.890Z\",\n                    \"updatedAt\": \"2023-07-09T13:44:12.890Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"64aabaa19822da31099b8c8f\",\n                    \"question\": \"Which of the following is not a Javascript framework?\",\n                    \"correctOptions\": \"D\",\n                    \"options\": {\n                        \"A\": \"node\",\n                        \"B\": \"vue\",\n                        \"C\": \"react\",\n                        \"D\": \"cassandra\"\n                    },\n                    \"quiz\": \"64aab7fb9822da31099b8c70\",\n                    \"createdAt\": \"2023-07-09T13:48:17.512Z\",\n                    \"updatedAt\": \"2023-07-09T13:48:17.512Z\",\n                    \"__v\": 0\n                }\n            ],\n            \"wrongAnswer\": [\n                {\n                    \"_id\": \"64aab9fe9822da31099b8c8a\",\n                    \"question\": \"What keyword is used to check whether a given property is valid or not?\",\n                    \"correctOptions\": \"A\",\n                    \"options\": {\n                        \"A\": \"in\",\n                        \"B\": \"is in\",\n                        \"C\": \"exists\",\n                        \"D\": \"lies\"\n                    },\n                    \"quiz\": \"64aab7fb9822da31099b8c70\",\n                    \"createdAt\": \"2023-07-09T13:45:34.020Z\",\n                    \"updatedAt\": \"2023-07-09T13:45:34.020Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"_id\": \"64aabaf79822da31099b8c94\",\n                    \"question\": \"How to stop an interval timer in Javascript?\",\n                    \"correctOptions\": \"A\",\n                    \"options\": {\n                        \"A\": \"clearInterval\",\n                        \"B\": \"clearTimer\",\n                        \"C\": \"intervalOver\",\n                        \"D\": \"None of the above\"\n                    },\n                    \"quiz\": \"64aab7fb9822da31099b8c70\",\n                    \"createdAt\": \"2023-07-09T13:49:43.882Z\",\n                    \"updatedAt\": \"2023-07-09T13:49:43.882Z\",\n                    \"__v\": 0\n                }\n            ],\n            \"verdict\": \"Pass\"\n        },\n        \"_id\": \"64aac1437cee974d6c1f10d5\",\n        \"createdAt\": \"2023-07-09T14:16:35.683Z\",\n        \"updatedAt\": \"2023-07-09T14:16:35.683Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get detailed report for log in user of all quiz attempted",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/report/user/{{userId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"report",
+								"user",
+								"{{userId}}"
+							]
+						},
+						"description": "gets all detail of user by userId including quiz attemted and result"
+					},
+					"response": [
+						{
+							"name": "Get detailed report for log in user of all quiz attempted",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/report/user/{{userId}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"report",
+										"user",
+										"{{userId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"73f-UAilyBRUClFRe87VybKVX/2iZm4\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Jul 2023 14:22:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Report Fetched Succesfully\",\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"64aac1437cee974d6c1f10d5\",\n            \"user\": {\n                \"_id\": \"64a997e9945afd3c91ea9501\",\n                \"fullName\": \"rk3\",\n                \"email\": \"rk3@gmail.com\",\n                \"password\": \"$2b$10$qliW..ImhZE9n3vcT78Fb.2EuMr9u/48Vv6TK97/Gt4O3J09ssCbW\",\n                \"role\": \"admin\",\n                \"createdAt\": \"2023-07-08T17:07:53.403Z\",\n                \"updatedAt\": \"2023-07-08T17:07:53.403Z\",\n                \"__v\": 0\n            },\n            \"quiz\": {\n                \"_id\": \"64aab7fb9822da31099b8c70\",\n                \"quizName\": \"javascript2\",\n                \"duration\": 1,\n                \"totalMarks\": 5,\n                \"passingMarks\": 3,\n                \"createdBy\": \"64a997e9945afd3c91ea9501\",\n                \"questions\": [\n                    \"64aab9369822da31099b8c80\",\n                    \"64aab9ac9822da31099b8c85\",\n                    \"64aab9fe9822da31099b8c8a\",\n                    \"64aabaa19822da31099b8c8f\",\n                    \"64aabaf79822da31099b8c94\"\n                ],\n                \"createdAt\": \"2023-07-09T13:36:59.997Z\",\n                \"updatedAt\": \"2023-07-09T13:51:23.411Z\",\n                \"__v\": 0\n            },\n            \"result\": {\n                \"correctAnswer\": [\n                    \"64aab9369822da31099b8c80\",\n                    \"64aab9ac9822da31099b8c85\",\n                    \"64aabaa19822da31099b8c8f\"\n                ],\n                \"wrongAnswer\": [\n                    \"64aab9fe9822da31099b8c8a\",\n                    \"64aabaf79822da31099b8c94\"\n                ],\n                \"verdict\": \"Pass\"\n            },\n            \"createdAt\": \"2023-07-09T14:16:35.683Z\",\n            \"updatedAt\": \"2023-07-09T14:16:35.683Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"64aac0cb9822da31099b8cb1\",\n            \"user\": {\n                \"_id\": \"64a997e9945afd3c91ea9501\",\n                \"fullName\": \"rk3\",\n                \"email\": \"rk3@gmail.com\",\n                \"password\": \"$2b$10$qliW..ImhZE9n3vcT78Fb.2EuMr9u/48Vv6TK97/Gt4O3J09ssCbW\",\n                \"role\": \"admin\",\n                \"createdAt\": \"2023-07-08T17:07:53.403Z\",\n                \"updatedAt\": \"2023-07-08T17:07:53.403Z\",\n                \"__v\": 0\n            },\n            \"quiz\": {\n                \"_id\": \"64aab7fb9822da31099b8c70\",\n                \"quizName\": \"javascript2\",\n                \"duration\": 1,\n                \"totalMarks\": 5,\n                \"passingMarks\": 3,\n                \"createdBy\": \"64a997e9945afd3c91ea9501\",\n                \"questions\": [\n                    \"64aab9369822da31099b8c80\",\n                    \"64aab9ac9822da31099b8c85\",\n                    \"64aab9fe9822da31099b8c8a\",\n                    \"64aabaa19822da31099b8c8f\",\n                    \"64aabaf79822da31099b8c94\"\n                ],\n                \"createdAt\": \"2023-07-09T13:36:59.997Z\",\n                \"updatedAt\": \"2023-07-09T13:51:23.411Z\",\n                \"__v\": 0\n            },\n            \"result\": {\n                \"correctAnswer\": [],\n                \"wrongAnswer\": [],\n                \"verdict\": \"Fail\"\n            },\n            \"createdAt\": \"2023-07-09T14:14:35.449Z\",\n            \"updatedAt\": \"2023-07-09T14:14:35.449Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get detailed report for admin view for all user with all quiz attempted",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quizName\":\"\",\r\n    \"userName\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/report/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"report",
+								"all"
+							]
+						},
+						"description": "get all details report of all user who has attempted the quiz, and admin can also search filter a report by user name or quiz name"
+					},
+					"response": [
+						{
+							"name": "Get detailed report for admin view for all user with all quiz attempted",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quizName\":\"\",\r\n    \"userName\":\"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/report/all",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"report",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"743-jB+VMUaNgG8smrgLEWT/BDxQD68\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Jul 2023 17:43:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"All Report Fetched Succesfully\",\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"64aac1437cee974d6c1f10d5\",\n            \"user\": {\n                \"_id\": \"64a997e9945afd3c91ea9501\",\n                \"fullName\": \"rk3\",\n                \"email\": \"rk3@gmail.com\",\n                \"password\": \"$2b$10$qliW..ImhZE9n3vcT78Fb.2EuMr9u/48Vv6TK97/Gt4O3J09ssCbW\",\n                \"role\": \"admin\",\n                \"createdAt\": \"2023-07-08T17:07:53.403Z\",\n                \"updatedAt\": \"2023-07-08T17:07:53.403Z\",\n                \"__v\": 0\n            },\n            \"quiz\": {\n                \"_id\": \"64aab7fb9822da31099b8c70\",\n                \"quizName\": \"javascript2\",\n                \"duration\": 1,\n                \"totalMarks\": 5,\n                \"passingMarks\": 3,\n                \"createdBy\": \"64a997e9945afd3c91ea9501\",\n                \"questions\": [\n                    \"64aab9369822da31099b8c80\",\n                    \"64aab9ac9822da31099b8c85\",\n                    \"64aab9fe9822da31099b8c8a\",\n                    \"64aabaa19822da31099b8c8f\",\n                    \"64aabaf79822da31099b8c94\"\n                ],\n                \"createdAt\": \"2023-07-09T13:36:59.997Z\",\n                \"updatedAt\": \"2023-07-09T13:51:23.411Z\",\n                \"__v\": 0\n            },\n            \"result\": {\n                \"correctAnswer\": [\n                    \"64aab9369822da31099b8c80\",\n                    \"64aab9ac9822da31099b8c85\",\n                    \"64aabaa19822da31099b8c8f\"\n                ],\n                \"wrongAnswer\": [\n                    \"64aab9fe9822da31099b8c8a\",\n                    \"64aabaf79822da31099b8c94\"\n                ],\n                \"verdict\": \"Pass\"\n            },\n            \"createdAt\": \"2023-07-09T14:16:35.683Z\",\n            \"updatedAt\": \"2023-07-09T14:16:35.683Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"64aac0cb9822da31099b8cb1\",\n            \"user\": {\n                \"_id\": \"64a997e9945afd3c91ea9501\",\n                \"fullName\": \"rk3\",\n                \"email\": \"rk3@gmail.com\",\n                \"password\": \"$2b$10$qliW..ImhZE9n3vcT78Fb.2EuMr9u/48Vv6TK97/Gt4O3J09ssCbW\",\n                \"role\": \"admin\",\n                \"createdAt\": \"2023-07-08T17:07:53.403Z\",\n                \"updatedAt\": \"2023-07-08T17:07:53.403Z\",\n                \"__v\": 0\n            },\n            \"quiz\": {\n                \"_id\": \"64aab7fb9822da31099b8c70\",\n                \"quizName\": \"javascript2\",\n                \"duration\": 1,\n                \"totalMarks\": 5,\n                \"passingMarks\": 3,\n                \"createdBy\": \"64a997e9945afd3c91ea9501\",\n                \"questions\": [\n                    \"64aab9369822da31099b8c80\",\n                    \"64aab9ac9822da31099b8c85\",\n                    \"64aab9fe9822da31099b8c8a\",\n                    \"64aabaa19822da31099b8c8f\",\n                    \"64aabaf79822da31099b8c94\"\n                ],\n                \"createdAt\": \"2023-07-09T13:36:59.997Z\",\n                \"updatedAt\": \"2023-07-09T13:51:23.411Z\",\n                \"__v\": 0\n            },\n            \"result\": {\n                \"correctAnswer\": [],\n                \"wrongAnswer\": [],\n                \"verdict\": \"Fail\"\n            },\n            \"createdAt\": \"2023-07-09T14:14:35.449Z\",\n            \"updatedAt\": \"2023-07-09T14:14:35.449Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						},
+						{
+							"name": "not authorized to get all report of all user by non admin user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quizName\":\"\",\r\n    \"userName\":\"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/report/all",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"report",
+										"all"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-5isGAcFKO173e/mQbRNy/YKxD30\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Jul 2023 20:38:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"You are not authorized\",\n    \"success\": false\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
