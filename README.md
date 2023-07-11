@@ -59,7 +59,7 @@ meaningful commit messages.
 
 - Created a public and protected RESTful APIs to interact between the frontend and the backend.
 
-- Capable of handling user authentication and performing CRUD operations for users, quiz's, questions and report/result.
+- Capable of handling user authentication and authorization and performing CRUD operations for users, quiz's, questions and report/result.
 
 - Users can register for an account using their full name, email address and password. Users can log in using their e-mail.
 
@@ -73,7 +73,7 @@ meaningful commit messages.
 
 - Used bcrypt to hash the password before saving in the data base.
 
-- Used jsonwebtoken and passport for protected routes for handling user authentication.
+- Used jsonwebtoken and passport for protected routes for handling user authentication and authorization.
 
 - Cors for cross origin access of Restful APIs.
 
