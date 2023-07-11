@@ -73,7 +73,7 @@ meaningful commit messages.
 
 - Used bcrypt to hash the password before saving in the data base.
 
-- Used jsonwebtoken and passport for protected routes for handling user authentication and authorization.
+- Used jsonwebtoken and passport for protected routes for handling user authorization.
 
 - Cors for cross origin access of Restful APIs.
 
