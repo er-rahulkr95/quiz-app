@@ -110,6 +110,7 @@ Start the server
 ```bash
   npm run start
 ```
+**Note** : Before starting please create an .env file consiting of varaibles as **NODE_ENV=development, PORT=3000, MONGODB_URL, SECRET** and assign neccessary values to MONGODB_URL and SECRET
 
 It will runs the app in the development mode.
 Backend will start on http://localhost:3000 to view it in your browser.
